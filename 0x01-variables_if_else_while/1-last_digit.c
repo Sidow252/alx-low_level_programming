@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Print statements based on the last digit of the random number.
+ * main - Printlast digit of the random number.
  * n is number stored in the variable n
  * return: 0 laways (success)
  */
