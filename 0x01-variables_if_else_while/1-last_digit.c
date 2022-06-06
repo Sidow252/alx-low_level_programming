@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Printlast digit of the random number.
- * n is number stored in the variable n
- * return: 0 laways (success)
+ * main - Print the last digit of the random number
+ * number stored in the variable n
+ * Return: 0 Alaways (success)
  */
 int main(void)
 {
