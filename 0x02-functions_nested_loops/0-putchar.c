@@ -1,21 +1,9 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * main - program prints _putchar
+ * main - prints _putchar
  * followed by a new line.
- * Return: Always 0 (Success)
+ * Reurn Always 0 (Success)
  */
-int main(void)
-{
-	_putchar('H');
-	_putchar('o');
-	_putchar('l');
-	_putchar('b');
-	_putchar('e');
-	_putchar('r');
-	_putchar('t');
-	_putchar('o');
-	_putchar('n');
-	_putchar('\n');
-	return (0);
-}
+int_putchair(char);
+return (0);
