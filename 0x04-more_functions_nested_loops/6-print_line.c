@@ -1,35 +1,22 @@
 #include "main.h"
 
 
-
 /**
- * print_diagonal - draws a diagonal line of length n in the terminal
+ * print_line - draws a straight line of length n in the terminal
  * followed by a new line
  *
- * @n: the number of times the character / should be printed
+ * @n: the number of times the character _ should be printed
  *
- * Description: If n is 0 or less, the function should only print '\n'
+ * Description: If n is 0 or less, the function should only print ''\n'
  *
  **/
 
-void print_diagonal(int n)
+void print_line(int n)
 {
-int i;
-int j;
+	int i;
 
-for (i = 0; i < n; i++)
-{
-/* print i spaces */
-for (j = 0; j < i; j++)
+	for (i = n; i > 0; i--)
+		_putchar('_');
 
-_putchar(' ');
-
-_putchar('\\');
-
-_putchar('\n');
-
-}
-
-if (n <= 0)
-_putchar('\n');
+	_putchar('\n');
 }
