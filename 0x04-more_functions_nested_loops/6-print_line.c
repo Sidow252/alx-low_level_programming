@@ -1,9 +1,16 @@
 #include "main.h"
 
+
+
 /**
- * main - a function that draws a straight line in the terminal.
+ * print_diagonal - draws a diagonal line of length n in the terminal
  * followed by a new line
- */
+ *
+ * @n: the number of times the character / should be printed
+ *
+ * Description: If n is 0 or less, the function should only print '\n'
+ *
+ **/
 
 void print_diagonal(int n)
 {
