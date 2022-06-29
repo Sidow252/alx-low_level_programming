@@ -1,87 +1,47 @@
-nclude "main.h"
-
-#include <stdlib.h>
-
 #include <stdio.h>
-
+#include <stdlib.h>
+#include "main.h"
 /**
+ *argstostr - concatenates all arguements of a program
  *
- *  * argstostr - concatenate all arguments of your program with newline
+ *@ac:arguement count
+ *@av:arguement vector
  *
- *   * @ac: argument count
- *
- *    * @av: double pointer to array of strings passed to main
- *
- *     * Return: Null if fail, else return pointer to new string
- *
- *      */
-
-
-
+ *Return:pointer to a new string
+ */
 char *argstostr(int ac, char **av)
-
 {
+	int i = 0, j = 0, z = 0, length = 0;
 
-		char *a, *retp;
+	char *p;
 
-			int i, j, total;
-
-
-
-				if (ac == 0 || av == NULL)
-
-							return (NULL);
-
-
-
-					for (i = 0, total = 0; i < ac; i++)
-
-							{
-
-										for (j = 0; *(*(av + i) + j) != '\0'; j++, total++)
-
-														;
-
-												total++;
-
-													}
-
-						total++;
-
-
-
-							a = malloc(total * sizeof(char));
-
-								if (a == NULL)
-
-											return (NULL);
-
-
-
-									retp = a;
-
-										for (i = 0; i < ac; i++)
-
-												{
-
-															for (j = 0; av[i][j] != '\0'; j++)
-
-																		{
-
-																						*a = av[i][j];
-
-																									a++;
-
-																											}
-
-																	*a = '\n';
-
-																			a++;
-
-																				}
-
-
-
-											return (retp);
-
+	if (ac == 0 || av == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j]; j++)
+		{
+			length++;
+		}
+		length += 1;
+	}
+	p = malloc((sizeof(char) * length) + 1);
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j]; j++)
+		{
+			p[z] = av[i][j];
+			z++;
+		}
+		p[z] = '\n';
+		z++;
+	}
+	p[z] = '\0';
+	return (p);
 }
