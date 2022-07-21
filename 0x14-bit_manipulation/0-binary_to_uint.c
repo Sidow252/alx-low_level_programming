@@ -52,14 +52,4 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
-	len = _strlen(b);
-	while (len-- && len >= 0)
-	{
-		if (b[len] == '1')
-			res += _pow_recursion(2, exp);
-		else if (b[len] != '0')
-			return (0);
-		exp++;
-	}
-	return (res);
 
